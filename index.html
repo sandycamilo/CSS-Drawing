@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
     <title>Creature</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-</html>
+</head>
 <body>
     <div class="creature">
 
@@ -16,7 +18,7 @@
         <div class="ears right">
             <div class="shadow"></div>
         </div>
-        
+
         <div class="face">
             <div class="eyes left">
                 <div class="pupil"></div>
@@ -33,4 +35,19 @@
         </div>
 
     </div>
+
+    <!-- <script>
+        var pupils = document.getElementsByClassName("pupil");
+        document.onmousemove = function(){
+            var x = event.clientX * 100 / window.innerWidth + "%";
+            var y = event.clientX * 100 / window.innerHeight + "%";
+
+            for(var i=0;i<2;i++){
+                pupils[i].style.left = x;
+                pupils[i].style.top = y;
+                pupils[i].syle.transform = "translate(-"+x+",-"+y+")";
+            }
+        }
+    </script> -->
 </body>
+</html>

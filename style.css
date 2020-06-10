@@ -85,7 +85,34 @@ body {
     height: 60px;
     background-color: rgb(114, 62, 62);
     border-radius: 70%;
-    position: absolute;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* animation-name: blink; */
+    /* animation-duration: 1000ms; */
+    /* animation-iteration-count: infinite; */
+    transition: 200ms;
+}
+
+.face:hover .eyes {
+    /* animation-name: blink; */
+    height: 0;
+    background-color: red !important;
+}
+
+@keyframes blink {
+    0% {
+        height: 60px;
+    }
+    90% {
+        height: 60px;
+    }
+    95% {
+        height: 0px;
+    }
+    100% {
+        height: 60px;
+    }
 }
 
 .face .eyes.left {
@@ -99,14 +126,19 @@ body {
 }
 
 .face .eyes .pupil {
-    width: 5px;
-    height: 25px;
-    background-color: aliceblue;
-    border-radius: 50%;
     float: right;
     margin: 10px 7px 0 0;
-    transform: rotate(-5deg);
+    /* transform: rotate(-5deg); */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 226, 226);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
+
 
 .chin {
     width: 250px;
